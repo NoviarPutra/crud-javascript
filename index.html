@@ -6,11 +6,12 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="text" id="input" placeholder="item" />
-    <input type="text" id="input2" placeholder="item" />
-    <button id="button">Submit</button>
-    <button id="delete">Delete</button>
-    <table>
+    <form id="addNewPerson">
+      <input type="text" name="firstName" placeholder="First Name" />
+      <input type="text" name="lastName" placeholder="Last Name" />
+      <button type="submit">Submit</button>
+    </form>
+    <table border>
       <thead>
         <tr>
           <th>Nama Depan</th>
@@ -18,8 +19,7 @@
           <th>Option</th>
         </tr>
       </thead>
-      <tbody id="apa">
-      </tbody>
+      <tbody id="listPerson"></tbody>
     </table>
     <script src="index.js"></script>
   </body>
