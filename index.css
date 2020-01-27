@@ -1,0 +1,33 @@
+html {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.header {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#addNewPerson {
+  margin-bottom: 1rem;
+}
+
+.person-table {
+  width: 100%;
+  text-align: center;
+}
+
+.deleteButton {
+  color: white;
+  background-color: rgb(200, 0, 0);
+  border: none;
+}

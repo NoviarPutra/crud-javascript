@@ -4,23 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <form id="addNewPerson">
-      <input type="text" name="firstName" placeholder="First Name" />
-      <input type="text" name="lastName" placeholder="Last Name" />
-      <button type="submit">Submit</button>
-    </form>
-    <table border>
-      <thead>
-        <tr>
-          <th>Nama Depan</th>
-          <th>Nama Belakang</th>
-          <th>Option</th>
-        </tr>
-      </thead>
-      <tbody id="listPerson"></tbody>
-    </table>
+    <header class="header">
+      <h1>Javascript CRUD</h1>
+      <p>This FUCKING CRUD</p>
+      <p>Yess FUCKING CRUD</p>
+    </header>
+    <main>
+      <form id="addNewPerson">
+        <input type="text" name="firstName" placeholder="First Name" />
+        <input type="text" name="lastName" placeholder="Last Name" />
+        <button type="submit">Submit</button>
+      </form>
+      <table border class="person-table">
+        <thead>
+          <tr>
+            <th>Nama Depan</th>
+            <th>Nama Belakang</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="listPerson"></tbody>
+      </table>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
