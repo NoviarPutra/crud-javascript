@@ -1,17 +1,46 @@
-html {
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
   font-family: "Courier New", Courier, monospace;
+  height: 100vh;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  font-size: 2rem;
+  margin-top: 2rem;
+  font-size: 1.6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-weight: bold;
+}
+
+.header p {
+  margin: 1rem 0;
 }
 
 main {
+  flex: 1 0 auto;
   width: 80%;
   margin: 0 auto;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,10 +53,103 @@ main {
 .person-table {
   width: 100%;
   text-align: center;
+  border: 1px black solid;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.person-table thead {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.person-table thead th {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-left: 1px white solid;
+}
+
+.person-table thead th:first-child {
+  border-left: none;
+}
+
+.person-table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.person-tabke th,
+.person-table td {
+  border: 1px solid black;
 }
 
 .deleteButton {
   color: white;
   background-color: rgb(200, 0, 0);
   border: none;
+}
+
+.editButton {
+  color: white;
+  background-color: rgb(0, 200, 0);
+  border: none;
+}
+
+#editModal {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#editModal .editModalContent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: gray;
+}
+
+.editModalContent h1 {
+  margin: 1rem 0 1rem;
+}
+
+#editPerson {
+  display: flex;
+  flex-direction: column;
+}
+
+#editPerson input {
+  margin: 5px 0 0;
+  padding: 1px 0;
+}
+
+#editPerson button {
+  width: 50%;
+  margin: 1rem 0 0 auto;
+}
+
+#close-button {
+  float: right;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-shrink: 0;
+  margin: 1rem 1rem;
+}
+
+footer a:first-child {
+  margin-right: auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: blue;
+  margin: 0 10px;
 }

@@ -3,32 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Javascript CRUD</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <header class="header">
-      <h1>Javascript CRUD</h1>
-      <p>This FUCKING CRUD</p>
-      <p>Yess FUCKING CRUD</p>
-    </header>
-    <main>
-      <form id="addNewPerson">
-        <input type="text" name="firstName" placeholder="First Name" />
-        <input type="text" name="lastName" placeholder="Last Name" />
-        <button type="submit">Submit</button>
-      </form>
-      <table border class="person-table">
-        <thead>
-          <tr>
-            <th>Nama Depan</th>
-            <th>Nama Belakang</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="listPerson"></tbody>
-      </table>
-    </main>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Javascript CRUD</h1>
+        <p>This is a MOTHERF*CKING Javascript CRUD website</p>
+        <p>Seriously? What the f*ck else do you want?</p>
+      </header>
+      <main>
+        <form id="addNewPerson">
+          <input type="text" name="firstName" placeholder="First Name" />
+          <input type="text" name="lastName" placeholder="Last Name" />
+          <button type="submit">Submit</button>
+        </form>
+        <table class="person-table">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="listPerson"></tbody>
+        </table>
+        <div id="editModal">
+          <div class="editModalContent">
+            <h1>Edit this Fucker</h1>
+            <form id="editPerson">
+              <input
+                type="text"
+                name="editFirstName"
+                placeholder="First Name"
+              />
+              <input type="text" name="editLastName" placeholder="Last Name" />
+              <button type="submit">Edit</button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <a href="https://github.com/NoviarPutra/crud-javascript">Github</a>
+        Made by two lazy lad
+        <a href="https://github.com/NoviarPutra">Noviar</a>
+        &
+        <a href="https://github.com/jasonbrandoo">Jason</a>
+      </footer>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
